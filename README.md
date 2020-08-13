@@ -1,4 +1,4 @@
-# plotarchive v0.0.2
+# plotarchive
 Plotarchive is a simple package which aims to assist plotters remeber what code created which figure.
 We aim to eliminate the problem where the code you used to make a figure is lost or deleted. 
 Plotarchive serialises the data used to make the figure, along with the generating function, and the entire code of the project.

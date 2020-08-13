@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="plotarchive", # Replace with your own username
-    version="0.0.2",
+    version="0.0.4",
     author="Chris Buswinka",
     author_email="buswinka@gmail.com",
     description="An easy method to save code and data that generates scientific plots.",
