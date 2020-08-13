@@ -3,24 +3,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 import plotarchive.src.files as files
 import os
-
-print('getcwd:      ', os.getcwd())
-print('__file__:    ', __file__)
-
-# plt.plot([1,2,3], [1,2,3], 'ko')
-# files, ax, fig = pa.archive('yeet')
-# fig.show()
-# print(ax)
+import pickle
+import dill
 
 
 @pa.archiver(filename='test.plotarchive')
-def plot(x,y):
-    plt.plot(x,y)
-    plt.show()
-    return plt.gcf()
+def plot(x, y, title='penis'):
+    fig, ax = plt.subplots()
+    ax.plot(x,y)
+    ax.set_title('asdf;j')
+    fig.show()
+
+fig = plot([1,2,3], np.array([1,2,3]), title='penis')
 
 
-fig = plot([1,2,3], np.array([1,2,3]), )
+# pa.expand('test.plotarchive')
 
-pa.archive('yeet.pa')
-pa.expand('yeet.pa')
+args = {'x':[1,2,3], 'y':[2,3,4]}
+plot(**args)
