@@ -7,17 +7,13 @@ import pickle
 import dill
 
 
-@pa.archiver(filename='test.plotarchive')
+@pa.archive(filename='test.plotarchive')
 def plot(x, y, title='penis'):
-    fig, ax = plt.subplots()
-    ax.plot(x,y)
-    ax.set_title('asdf;j')
-    fig.show()
+    plt.figure()
+    plt.plot(x,y)
+    plt.show()
 
 fig = plot([1,2,3], np.array([1,2,3]), title='penis')
 
 
-# pa.expand('test.plotarchive')
-
-args = {'x':[1,2,3], 'y':[2,3,4]}
-plot(**args)
+pa.expand('test.plotarchive')
