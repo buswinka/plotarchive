@@ -17,10 +17,10 @@ print('__file__:    ', __file__)
 def plot(x,y):
     plt.plot(x,y)
     plt.show()
-    return plt.gcf()
+    return None
 
 
-fig = plot([1,2,3], np.array([1,2,3]), )
+plot([1,2,3], np.array([1,2,3]), )
 
 pa.archive('yeet.pa')
 pa.expand('yeet.pa')

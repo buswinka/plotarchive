@@ -14,6 +14,7 @@ def archive(filename):
     data = {'ax': plt.gca(), 'fig': plt.gcf(), 'files': python_files}
     pickle.dump(data, open(filename, 'wb'))
 
+    files.write_files_from_dict(data['files'])
 
 
 class archiver(object):
