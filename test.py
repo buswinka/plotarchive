@@ -7,7 +7,7 @@ import pickle
 import dill
 
 
-@pa.archive(filename='test.plotarchive')
+@pa.archive()
 def plot(x, y, title='penis'):
     plt.figure()
     plt.plot(x,y)
