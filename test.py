@@ -8,7 +8,7 @@ import dill
 
 
 @pa.archive()
-def plot(x, y, title='penis'):
+def plot(x, y, title='my_plot'):
     plt.figure()
     plt.plot(x,y)
     plt.show()
